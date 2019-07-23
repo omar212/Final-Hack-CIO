@@ -1,0 +1,414 @@
+
+
+body {
+    color: #404040;
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Style the header */
+header {
+    background-color: #666;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    width: 100%;
+    top: 0%;
+    bottom: 95%;
+    position: absolute;
+    z-index: 1000;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: absolute;
+    width: 33.3333%;
+    height: 95%;
+    top: 5%;
+    left: 0;
+    overflow: hidden;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    bottom: 5%;
+}
+
+.map {
+    position: absolute;
+    left: 24%;
+    width: 76%;
+    top: 5%;
+    bottom: 0%;
+}
+
+h1 {
+    font-size: 22px;
+    margin: 0;
+}
+
+h2 {
+    background-color: white;
+    color: #054ada;
+
+    font: 400 22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    font-weight: bold;
+
+    text-align: center;
+    margin: 5px;
+}
+
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #101010;
+}
+
+.heading {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    min-height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+    background-color: #054ada;
+    color: #fff;
+}
+
+.listings {
+    height: 100%;
+    width: 75%;
+    overflow: auto;
+    padding-bottom: 60px;
+    /* border-color: black;
+        border-style: solid; */
+}
+
+.listings .item {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.listings .item:last-child {
+    border-bottom: none;
+}
+
+.listings .item .title {
+    display: block;
+    color: #054ada;
+    font-weight: 700;
+}
+
+.listings .item .title small {
+    font-weight: 400;
+}
+
+.listings .item.active .title,
+.listings .item .title:hover {
+    color: #054ada;
+}
+
+.listings .item.active {
+    background-color: #f8f8f8;
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #054ada;
+    border-radius: 0;
+}
+
+.marker {
+    border: none;
+    cursor: pointer;
+    height: 21px;
+    width: 50px;
+    background-image: url(logo.png);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.clearfix {
+    display: block;
+}
+
+.clearfix:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+
+.mapboxgl-popup-content .table {
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.mapboxgl-popup-content .table .cool-facts {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.mapboxgl-popup-content .table .cool-facts .cool-facts-title {
+    color: #054ada;
+    font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+.mapboxgl-popup-content .table .cool-facts .creative-icons {
+    margin-top: -11px;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.mapboxgl-popup-content .table .cool-facts .facts li {
+    font-size: 20px;
+    text-align: left;
+    margin-left: -15px;
+    margin-right: 30px;
+    color: black;
+}
+
+.mapboxgl-popup-content .table .events {
+    display: inline;
+}
+
+.mapboxgl-popup-content .table .events .events-title {
+    color: #054ada;
+    font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+.mapboxgl-popup-content .table .events .weekly-events li {
+    margin-left: -15px;
+    font-size: 17px;
+    color: black;
+}
+
+.mapboxgl-popup-content .table .events .weekly-icons {
+    margin-top: -11px;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.mapboxgl-popup-content .table .trips .trips-title {
+    color: #054ada;
+    font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+
+.mapboxgl-popup-content .table .trips .vacation-icons {
+    margin-top: -11px;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+
+.mapboxgl-popup-content .table .trips .ig-slideshow {
+    border: none;
+    overflow: hidden;
+    width: 310px;
+    height: 160px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.mapboxgl-popup-content .table .social-media .social-media-title {
+    color: #054ada;
+    font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.mapboxgl-popup-content .table .social-media .icon-row {
+    margin-left: 20px;
+}
+
+.social-media {
+    display: inline;
+}
+
+.social-media .icons {
+    width: 20%;
+    margin: 10px;
+}
+
+.mapboxgl-popup-content .table .twitter-hashtag-button {
+    color: black;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 640px) {
+    .mapboxgl-ctrl-geocoder  {
+        /* position:absolute; */
+        /* z-index:1; */
+        /* width:100%; */
+        right: 0;
+        margin-left:75%;
+        margin-top: -7%;
+        /* margin-bottom: -50%; */
+        /* top:20px; */
+        }
+}
+
+
+
+
+
+
+
+/* Marker tweaks */
+.mapboxgl-popup {
+    padding-bottom: 50px;
+    width: 100%;
+    height: 50%;
+    /*HERE*/
+}
+
+.mapboxgl-popup-close-button {
+    display: none;
+}
+
+.mapboxgl-popup-content {
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    padding: 0;
+}
+
+.mapboxgl-popup-content-wrapper {
+    padding: 1%;
+}
+
+.mapboxgl-popup-content h3 {
+    background: #054ada;
+    color: #fff;
+    margin: 0;
+    display: block;
+    padding: 10px;
+    border-radius: 3px 3px 0 0;
+    font-weight: 700;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+    width: 200%;
+    overflow-y: auto;
+    border: none;
+}
+
+.mapboxgl-popup-content {
+    margin: 0;
+    display: block;
+    padding: 0px 10px 10px 10px;
+    font-weight: 400;
+    width: 200%;
+    background-color: white;
+    overflow: scroll;
+    height: 150%;
+}
+
+.mapboxgl-popup-content div {
+    padding: 10px;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+    cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+    margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
+    border: none;
+}
+#logo {
+    margin: 5 px;
+}
+
+    .container {
+    height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-size: cover;
+  
+          background-repeat: no-repeat;
+          z-index: 1000;
+      }
+
+      .container-box {
+          position: absolute;
+          bottom: 5%;
+          right: 5%;
+          display: inline-block;
+   
+          border: 1px solid #333;
+          z-index: 1000;
+      }
+    
+
+.mapboxgl-popup-content .table .join-now {
+    margin: 10px;
+    text-decoration: none;
+    color: #054ada;
+    font-size: 60px;
+}
